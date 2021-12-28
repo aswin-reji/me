@@ -1,0 +1,60 @@
+from pprint import pprint
+from PIL import Image
+from PIL.ExifTags import TAGS
+import piexif
+
+#python project for vechoochira collage
+
+print("\n\n\n HELLO WORLD... VISWABRAHMANA COLLEGE :) \n\n\n")
+
+print("HOW TO USE \n\n 1. ENTER THE IMAGE FILE NAME \n\n 2. PRESS ENTER\n\n") 
+
+imagename = input("ENTER THE FILE NAME : " )
+
+image = Image.open(imagename)
+
+
+exifdata = image.getexif()
+
+
+for tag_id in exifdata:
+    
+    tag = TAGS.get(tag_id, tag_id)
+    data = exifdata.get(tag_id)
+     
+    if isinstance(data, bytes):
+        data = data.decode()
+    print(f"{tag:25}: {data}")
+    
+    
+codec = 'ISO-8859-1'  
+print("\n\n here is the location details \n\n\n")
+def exif_to_tag(exif_dict):
+    exif_tag_dict = {}
+    thumbnail = exif_dict.pop('thumbnail')
+   
+
+    for ifd in exif_dict:
+        exif_tag_dict[ifd] = {}
+        for tag in exif_dict[ifd]:
+            try:
+                element = exif_dict[ifd][tag].decode(codec)
+
+            except AttributeError:
+                element = exif_dict[ifd][tag]
+
+            exif_tag_dict[ifd][piexif.TAGS[ifd][tag]["name"]] = element
+
+    return exif_tag_dict
+
+def main():
+    
+    im = Image.open(imagename)
+
+    exif_dict = piexif.load(im.info.get('exif'))
+    exif_dict = exif_to_tag(exif_dict)
+
+    pprint(exif_dict['GPS'])
+
+if __name__ == '__main__':
+   main()
