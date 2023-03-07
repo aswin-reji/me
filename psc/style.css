@@ -1,0 +1,67 @@
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.quiz-header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.quiz-body {
+	padding: 20px;
+}
+
+.question-container {
+	margin-bottom: 20px;
+}
+
+.options-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+button {
+	padding: 10px;
+	margin-bottom: 5px;
+	background-color: #f2f2f2;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ddd;
+}
+/* Style the container for the radio buttons */
+.options-container {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  /* Style the radio buttons */
+  .options-container label {
+	display: inline-flex;
+	align-items: center;
+	padding: 10px;
+	margin: 5px;
+	background-color: #d0cdcd;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  /* Style the checked radio button */
+  .options-container label input[type="radio"]:checked {
+	background-color: #2777b4;
+  }
+  
+  /* Style the radio button label text */
+  .options-container label span {
+	margin-left: 10px;
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
