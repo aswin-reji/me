@@ -93,7 +93,7 @@ nextBtn.addEventListener("click", () => {
 	checkAnswer();
 	currentQuestion++;
 	if (currentQuestion >= questions.length) {
-		questionEl.textContent = "Quiz completed!.... poyi irunn padik malare";
+		questionEl.textContent = "Quiz completed!....";
 		option1El.parentElement.style.display = "none";
 		option2El.parentElement.style.display = "none";
 		option3El.parentElement.style.display = "none";
