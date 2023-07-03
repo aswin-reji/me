@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>DOCTORS DUTY ROSTER</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <h1>GOVERMENT MEDICAL COLLAGE, KOTTAYAM</h1>
+            </div>
+            <div>
+                <button onclick="addDuty()" class="add-duty-btn">Add Duty</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">DOCTORS ON DUTY</h2>
+        </section>
+        <section class="about section" id="about">
+            <div>
+                <ul id="duty-list" class="text-center"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Example data for duty roster
+        var firstShiftDoctors = ["Dr. Smith", "Dr. Johnson", "Dr. Davis"];
+        var secondShiftDoctors = ["Dr. Wilson", "Dr. Anderson", "Dr. Thomas"];
+
+        // Function to display the duty roster for the first shift
+        function displayFirstShiftDoctors() {
+            var dutyList = document.getElementById("duty-list");
+            dutyList.innerHTML = ""; // Clear the existing list
+
+            for (var i = 0; i < firstShiftDoctors.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = firstShiftDoctors[i];
+                dutyList.appendChild(listItem);
+            }
+        }
+
+        // Function to display the duty roster for the second shift
+        function displaySecondShiftDoctors() {
+            var dutyList = document.getElementById("duty-list");
+            dutyList.innerHTML = ""; // Clear the existing list
+
+            for (var i = 0; i < secondShiftDoctors.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = secondShiftDoctors[i];
+                dutyList.appendChild(listItem);
+            }
+        }
+
+        // Function to update the doctors' names in the first shift
+        function updateFirstShiftDoctors(doctors) {
+            firstShiftDoctors = doctors;
+            checkAndUpdateDutyRoster();
+        }
+
+        // Function to update the doctors' names in the second shift
+        function updateSecondShiftDoctors(doctors) {
+            secondShiftDoctors = doctors;
+            checkAndUpdateDutyRoster();
+        }
+
+        // Function to prompt for doctors' names and update the duty roster
+        function addDuty() {
+            var firstShiftDoctorsInput = prompt("Enter doctors' names for the first shift (comma-separated):");
+            var secondShiftDoctorsInput = prompt("Enter doctors' names for the second shift (comma-separated):");
+
+            var firstShiftDoctorsArray = firstShiftDoctorsInput.split(",").map(doctor => doctor.trim());
+            var secondShiftDoctorsArray = secondShiftDoctorsInput.split(",").map(doctor => doctor.trim());
+
+            updateFirstShiftDoctors(firstShiftDoctorsArray);
+            updateSecondShiftDoctors(secondShiftDoctorsArray);
+        }
+
+        // Function to check and update the duty roster based on the current time
+        function checkAndUpdateDutyRoster() {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+
+            if (currentHour < 14) {
+                // Before 2 PM, display first shift doctors
+                displayFirstShiftDoctors();
+            } else {
+                // After 2 PM, display second shift doctors
+                displaySecondShiftDoctors();
+            }
+
+            // Reset the scroll position to the top
+            var dutyContainer = document.getElementById("duty-list");
+            dutyContainer.scrollTop = 0;
+            // Smoothly scroll to the top position
+            dutyContainer.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // Initial duty roster display
+        checkAndUpdateDutyRoster();
+
+        // Update the duty roster every minute
+        setInterval(checkAndUpdateDutyRoster, 60000);
+    </script>
+</body>
+</html>
