@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .background-image {
+            background-image: url('https://kottayammedicalcollege.org/wp-content/themes/mck-bt1/assets/img/kmc_logo.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1; /* Adjust the opacity value as needed */
+        }
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #e9365d;
+  --second-color: #020202;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+
+
+
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color:  #0d6ba6;
+  box-shadow: 0 1px 4px rgb(3, 3, 3);
+}
+
+/*===== NAV =====*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(248, 248, 248);
+  font-weight: var(--font-semi);
+}
+
+
+
+
+
+
+
+/* Style for the navigation bar */
+
+
+/* Style for the main content */
+.main {
+    padding-top: 130px;
+    text-align: center;
+    
+}
+
+/* Style for the scrolling text container */
+.scroll {
+    overflow: hidden;
+    background-color: #501f1f; /* Background color for contrast */
+    max-height: 200%;
+}
+
+/* Style for the category list */
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute categories evenly */
+}
+
+/* Style for each category */
+.category {
+    text-align: center;
+}
+
+/* Style for the doctor list */
+.doctor-list {
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+/* Style for doctor list items */
+.doctor-list li {
+    margin: 5px 0;
+}
+
+li h2{
+    font-size: 3em;
+    color: rgb(6, 48, 140);
+}
+
+
+
+
+/*===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-title {
+    margin-bottom: var(--mb-6);
+  }
+
+  .section-title::after {
+    width: 80px;
+    top: 3rem;
+  }
+
+  .about__container,
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+
+}
+
+.data {
+  position: fixed;
+  height: 10%;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d6ba6;
+}
+
+.data .scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  
+  
+}
+
+.data marquee {
+  padding: 2%;
+  display: inline-block;
+  animation: scroll-marquee 50s linear infinite;
+}
+
+@keyframes scroll-marquee {
+  0% 100% {
+    transform: translateX(-100%);
+  }
+}
+
+.pro-field,
+.mobile-field {
+  
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px; /* Increase font width */
+}
+
+.scroll {
+    overflow: hidden;
+    background-color: #ffffff; /* Background color for contrast */
+    max-height: 10%;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title> DUTY ROSTER</title>
+</head>
+
+<body >
+    
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        
+        <nav class="nav bd-grid">
+            <div>
+                <h1>WELCOME TO GOVERNMENT MEDICAL COLLEGE KOTTAYAM</h1>
+            </div>
+            <div>
+          
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+     
+        <section class="about section" id="about" class="background-image">
+            
+            </section></main>
+          
+              <section>
+                <div class="duty-container">
+                    <div class="doctors-duty">
+                      
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </section>
+            <section >
+                <marquee direction="up" vspace="-10px" scrollamount="10">
+                    <div class="scroll">
+                      <div class="column">
+                          <ul class="category-list">
+                              <li class="category">
+                                  <h2><span></span>OUR VISION</span></h>
+                                    
+                                  <H3>We envision a centre of excellence in medical education, innovation and comprehensive health care upholding<BR> evidence based practices, ethical values and human dignity.
+                                    <b><H2>വീക്ഷണം</H2>
+                                    ആരോഗ്യ വിദ്യാഭ്യാസം, നൂതന ചികിത്സാ രീതികൾ, സമഗ്ര ആരോഗ്യ പരിപാലനംഎന്നിവയിൽ ശാസ്ത്രീയവും, മൂല്യങ്ങളിൽ ഉറച്ചതും പൗരന്റെ അന്തസ്സിനെ <BR> ഉയർത്തി പിടിക്കുന്നതും കാലാനുസൃതമായി പാരിഷ്കരിക്കുന്നതുമായ മികവിന്റെ ഒരു കേന്ദ്രം.<BR></H3>
+                                  </b></h2></li>
+                      </div>
+                  
+                      <div class="column">
+                          <ul class="category-list">
+                              <li class="category">
+                                  <h2>MISSION</h2>
+                                <b> 1. To provide affordable, high quality tertiary care practices of international standards to humanity
+<BR><BR>2. To promote excellence in medical education, training and research</b> <BR>
+    <h2>ദൗത്യം</h2>
+
+<b>1. രാജ്യാന്തര നിലവാരത്തിലുള്ള  മികച്ച ചികിത്സ സൗകര്യങ്ങൾ  വളരെ കുറഞ്ഞ ചിലവിൽ ലഭ്യമാക്കുക.<BR><BR>
+2. ആരോഗ്യ വിദ്യാഭ്യാസം, പരിശീലനം, ഗവേഷണം എന്നിവയിൽ മികവിനെ പ്രോത്സാഹിപ്പിക്കുക.   <BR>  </b></li>               
+                      </div>
+                      <div class="column">
+                        <ul class="category-list" style="text-align: left;">
+                            <li class="category">
+                                <h2>QUALITY POLICY :</h2>
+                                <b><p>1. To provide honest, unparalleled, comprehensive, effective and quality patient care</p>
+                                <p>2. To ensure that patients are treated with due respect, compassion, empathy and a sense of security.</p>
+                                <p>3. To continuously improve and update our services in compliance with National Quality Assurance Standards.</p>
+                                 <h2>മികവിന്റെ നയരേഖ:</h2>
+                                <p>1. സമാനതകൾ ഇല്ലാത്തവിധം   സമൂലവും കാര്യക്ഷമവും സത്യസന്ധവും ഗുണനിലവാരമുള്ളതുമായ ചികിത്സ ലഭ്യമാക്കുക.</p>
+                                <p>2. രോഗികൾക്ക് അവരർഹിക്കുന്ന കാരുണ്യം , സഹാനുഭൂതി , സുരക്ഷിതരെന്ന  ആത്മവിശ്വാസം എന്നിവയോടെ പരിചരണം ലഭ്യമാക്കുക.</p>
+                                <p>3. ദേശീയ ഗുണനിലവാര മാനദണ്ഡങ്ങൾ പ്രകാരമുള്ള സേവനങ്ങൾ  ഉറപ്പു വരുത്തുവാൻ ദിനേന   നവീകരിക്കപ്പെട്ടുകൊണ്ടിരിക്കുക.</p>
+                            </b></li>
+                        </ul>
+                    </div>
+                    
+                  </div>
+                  </marquee>
+          </section>
+        
+    
+
+          <section class="data">
+            <div class="scrolling-text">
+              <marquee behavior="scroll" direction="left">
+                <span class="pro-field">Public Relation Officer at your service : +91 7025212233</span>
+              </marquee>
+            </div>
+          </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+
+    
+   
+</body>
+
+</html>
