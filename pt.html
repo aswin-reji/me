@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="refresh" content="101; URL=https://aswinreji.com/gallery.html" />
+    <style>
+        .background-image {
+         
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1; /* Adjust the opacity value as needed */
+        }
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #e9365d;
+  --second-color: #020202;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+
+
+
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color:  #0d6ba6;
+  box-shadow: 0 1px 4px rgb(3, 3, 3);
+}
+
+/*===== NAV =====*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(248, 248, 248);
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+/* Style for the navigation bar */
+
+
+/* Style for the main content */
+.main {
+    padding-top: 130px;
+    text-align: center;
+    
+}
+
+/* Style for the scrolling text container */
+.scroll {
+    overflow: hidden;
+    background-color: #501f1f; /* Background color for contrast */
+    max-height: 200%;
+}
+
+/* Style for the category list */
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute categories evenly */
+}
+
+/* Style for each category */
+.category {
+    text-align: center;
+}
+
+/* Style for the doctor list */
+.doctor-list {
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+/* Style for doctor list items */
+.doctor-list li {
+    margin: 5px 0;
+}
+
+li h3{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    text-align:left;
+    padding-left: 4em;
+    
+}
+li h1{
+    font-size: 3em;
+    color: rgb(6, 48, 140);
+}
+
+
+
+
+/*===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-title {
+    margin-bottom: var(--mb-6);
+  }
+
+  .section-title::after {
+    width: 80px;
+    top: 3rem;
+  }
+
+  .about__container,
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+
+}
+
+.data {
+  position: fixed;
+  height: 10%;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d6ba6;
+}
+
+.data .scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  
+  
+}
+
+.data marquee {
+  padding: 2%;
+  display: inline-block;
+  animation: scroll-marquee 50s linear infinite;
+}
+
+@keyframes scroll-marquee {
+  0% 100% {
+    transform: translateX(-100%);
+  }
+}
+
+.pro-field,
+.mobile-field {
+  
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px; /* Increase font width */
+}
+
+.scroll {
+    overflow: hidden;
+    background-color: #ffffff; /* Background color for contrast */
+    max-height: 10%;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title> pt</title>
+</head>
+
+<body >
+    
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        
+        <nav class="nav bd-grid">
+            <div>
+                <h1>WELCOME TO GOVERNMENT MEDICAL COLLEGE KOTTAYAM</h1>
+            </div>
+            <div>
+          
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+     
+        <section class="about section" id="about" class="background-image">
+            
+            </section></main>
+          
+              <section>
+                <div class="duty-container">
+                    <div class="doctors-duty">
+                      
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </section>
+            <section >
+                
+              <marquee direction="up" vspace="-10px" scrollamount="10">
+                    <div class="scroll">
+                      <div class="column">
+                          <ul class="category-list">
+                              <li class="category">
+                                
+                             
+                                <h1>PATIENT’S RIGHTS</h1>
+                                <h3>1. Right to receive high-quality care appropriate to the patient’s needs <BR>and within the scope of the hospital without discrimination of <BR>socioeconomic and geopolitical status.</h3>
+                                <h3>2. Right to be informed about the illness, treatment, and prognosis and <BR>to know the name of the treating doctor.</h3>
+                                <h3>3. Right to be provided with confidentiality during examination, treatment,<BR>and in medical records.</h3>
+                                <h3>4. Right for informed consent for research, transfusion of blood and<BR> components, anesthesia, surgery, other procedures, and treatment.</h3>
+                                <h3>5. Right to get access to treatment and investigation reports.</h3>
+                                <h3>6. Right to protection from neglect or abuse and the right to receive patient education.</h3>
+                                <h3>7. Right to determine what information regarding their care would be provided to others.</h3>
+                                <h3>8. Right to voice any complaints and seek redressal.</h3>
+                                <h3>9. Right to refusal of treatment.</h3>
+                                <h3>10. Right to get discharge, proper referral, and the right to receive the body <BR>as per existing rules.</h3>
+                                <br>
+                                <h1>രോഗികളുടെ അവകാശങ്ങൾ</h1>
+                                <h3>1. സമൂഹം, സാമ്പത്തികം, ഭൂമിശാസ്ത്രം, രാഷ്ട്രീയം എന്നിവയ്ക്ക് അതീതമായ രോഗിയുടെ ആവശ്യങ്ങൾക്കനുസരിച്ച് ഉയർന്ന നിലവാരമുള്ള പരിചരണം ലഭിക്കാനുള്ള അവകാശം.</h3>
+                                <h3>2. രോഗം, ചികിത്സ, രോഗനിർണയം എന്നിവയെക്കുറിച്ച് അറിയാനും, ചികിത്സിക്കുന്ന <BR>ഡോക്ടറുടെ പേര് അറിയാനുമുള്ള അവകാശം.</h3>
+                                <h3>3. പരിശോധന, ചികിത്സ, മെഡിക്കൽ രേഖകളിൽ സ്വകാര്യതയും വിശ്വാസ്യതയും സംരക്ഷിക്കാനുള്ള അവകാശം.</h3>
+                                <h3>4. ഗവേഷണം, രക്തം, രക്തഘടകങ്ങൾ കൈമാറ്റം, അനസ്തേഷ്യ, ശസ്ത്രക്രിയ, മറ്റ് ചികിത്സാരീതികൾ എന്നിവക്ക് അനുമതി നൽകാനുള്ള അവകാശം.</h3>
+                                <h3>5. ചികിത്സ, പരിശോധന റിപ്പോർട്ടുകൾ ലഭിക്കാനുള്ള അവകാശം.</h3>
+                                <h3>6. അവഗണനയിൽ നിന്നോ ദുരുപയോഗത്തിൽ നിന്നോ സംരക്ഷിക്കപ്പെടാൻ അവകാശവും <BR>രോഗിക്ക് ആരോഗ്യം സംബന്ധിച്ച വിദ്യാഭ്യാസം ലഭിക്കാനുള്ള അവകാശവും.</h3>
+                                <h3>7. രോഗ വിവരങ്ങൾ ആരെക്കൊണ്ടായാലും നൽകണമെന്ന് തീരുമാനിക്കാനുള്ള അവകാശം.</h3>
+                                <h3>8. പരാതികൾ ഉന്നയിക്കാനും പരിഹാരം തേടാനുമുള്ള അവകാശം.</h3>
+                                <h3>9. ചികിത്സ നിരസിക്കാനുള്ള അവകാശം.</h3>
+                                <h3>10. ഡിസ്ചാർജും റഫറലും ലഭിക്കാനുള്ള അവകാശം, നിലവിലുള്ള നിയമങ്ങൾ <BR>അനുസരിച്ച് മൃതശരീരം വിട്ടു ലഭിക്കാനുള്ള അവകാശം.</h3>
+                                <BR>
+
+                                <h1>PATIENT’S RESPONSIBILITIES</h1>
+                                
+                    
+                                <h3>1. Provide complete and accurate and correct information including full name, <BR>age, address, telephone/mobile number, date of birth, aadhar number, insurance,<BR> APL/BPL details at the time of registration, admission and whenever necessary <BR>since it is difficult to make corrections later.</h3>
+                                <h3>2. Provide complete, accurate and correct information regarding medical history,<BR> medications, allergies, present complaints as it is essential for proper treatment.</h3>
+                                <h3>3. Follow strictly treatment plan advised by the physician and the nurses and <BR>healthcare professionals as they carry out physician’s order.</h3>
+                                <h3>4. Signed consent is required for refusal of treatment.</h3>
+                                <h3>5. Immediately report unexpected changes in the condition of the<BR> patient to the concerned medical team.</h3>
+                                <h3>6. Follow the rules and regulations of the hospital:</h3>
+                                <H3>7. Maintain silence.</H3>
+                                   <H3>8. Except in special circumstances as directed by the healthcare provider the <BR>patient should be accompanied by only one bystander.</H3>
+                                  
+                                   <H3>9. Restrict the number of visitors and avoid bringing children below 10 years of age.</H3>
+                                   <H3>10. Do not bring or use non–recyclable plastic items within the hospital.</H3>
+                              
+                                <h3>11. Do not bring or use any alcohol, cigarettes, unauthorized drugs, tobacco, <BR>and weapons into the hospital.</h3>
+                                <h3>12. Money transactions to be done as per hospital rules and regulations.</h3>
+                                <h3>13. Do not spit or throw waste in the hospital premises. Use designated <BR>areas for waste disposal.</h3>
+                                <h3>14. Use toilets and bathrooms properly and do not damage.</h3>
+                                <h3>15. Do not ask to provide any incorrect information or false certificates and <BR>or advocate forcefully by unlawful means.</h3>
+                                <h3>16. To avoid legal problems, respect the dignity of Hospital staff and <BR>other patients as human beings and as professionals, and should not resort to <BR>violence in any form and damage or destroy any property of the hospital<BR> in case of grievance.</h3>
+                            <BR>
+                              <h1>രോഗികളുടെ ഉത്തരവാദിത്തങ്ങൾ</h1>
+                             
+        <h3>1. പൂർണ്ണമായ പേര്, മേൽവിലാസം, ഫോൺ നമ്പർ, ജനനതിയതി, ആധാർ നമ്പർ,<BR> ഇൻഷുറൻസ് വിവരങ്ങൾ, റേഷൻ കാർഡ് വിവരങ്ങൾ, എന്നിവ റെജിസ്ട്രേഷൻ,<BR>അഡ്മിഷൻസമയത്തും,വിവരങ്ങൾ ആവശ്യമായി വരുന്ന മറ്റു സമയങ്ങളിലും കൃത്യമായി <BR>നൽകുക, പിന്നീടുള്ള തിരുത്തലുകൾ എളുപ്പമല്ല.</h3>
+        <h3>2. ആരോഗ്യ പ്രശ്നങ്ങൾ, കഴിക്കുന്ന മരുന്നുകൾ, അലർജികൾ, ഇവയെ കുറിച്ചുള്ള പൂർണ്ണവും<BR> കൃത്യവുമായ വിവരങ്ങൾ മുന്നോട്ടുള്ള ചികിത്സക്ക് അനിവാര്യമാണ്.</h3>
+        <h3>3. ചികിത്സയെ സംബന്ധിച്ചുള്ള ഡോക്ടർമാരുടെയും നഴ്‌സ്മാരുടെയും മറ്റ് ആരോഗ്യവിദഗ്‌ധരുടെയും നിർദ്ദേശങ്ങൾ കൃത്യമായി പാലിക്കുക.</h3>
+        <h3>4. ചികിത്സ നിരാകരിക്കണമെങ്കിൽ കയ്യൊപ്പുള്ള സമ്മതപത്രം നൽകേണ്ടതാണ്.</h3>
+        <h3>5. രോഗാവസ്ഥയിൽ അപ്രതീക്ഷിതമായ വ്യതിയാനങ്ങൾ കാണുന്നപക്ഷം, ഉടൻ തന്നെ ബന്ധപ്പെട്ട <BR>ആരോഗ്യ പ്രവർത്തകരെ വിവരം ധരിപ്പിക്കേണ്ടതാണ്.</h3>
+        <h3>6. ആശുപത്രിയുടെനിയമങ്ങൾപാലിക്കാൻശ്രദ്ധിക്കുക:</h3>
+
+           <H3> 7. നിർദിഷ്‌ടസ്‌ഥലങ്ങളിൽനിശബ്ദതപാലിക്കുക.</H3>
+            <H3>8. ആരോഗ്യ പ്രവർത്തകർ നിർദ്ദേശിക്കുന്ന പ്രത്യേക സാഹചര്യങ്ങളിൽ ഒഴികെ രോഗിയുടെ<BR> കൂടെ ഒരാൾ മാത്രം ഉണ്ടായിരിക്കേണ്ടതാണ്.</H3>
+            <H3>9. നിർദിഷ്ട സന്ദർശന സമയം കൃത്യമായിപാലിക്കുക.</H3>
+            <H3>10. സന്ദർശകരുടെ എണ്ണം കുറക്കുകയും പന്ത്രണ്ട് വയസ്സിൽ താഴെയുള്ള കുട്ടികളുടെ <BR>ആശുപത്രി സന്ദർശനം ഒഴിവാക്കുകയും ചെയ്യുക.</H3>
+            <H3>11. ആശുപത്രിയിൽ പുനരുപയോഗയോഗ്യമല്ലാത്ത പ്ലാസ്റ്റിക് വസ്തുക്കൾ കൊണ്ടുവരാതിരിക്കുക.</H3>
+        
+        <h3>12. ആശുപത്രിയിൽ മദ്യം, പുകവലി, മയക്കുമരുന്ന്, പുകയില, മാരകായുധങ്ങൾ മുതലായവ കൊണ്ടുവരാതിരിക്കുക.</h3>
+        <h3>13. പണമിടപാടുകൾ സംബന്ധിച്ചുള്ള കാര്യങ്ങൾ ആശുപത്രിയുടെ നിയമങ്ങൾക്ക്<BR> അനുസൃതമായി ചെയ്യുക.</h3>
+        <h3>14. ആശുപത്രി കോമ്പൗണ്ടിൽ തുപ്പുകയോ വേസ്റ്റുകൾ അലക്ഷ്യമായി വലിച്ചെറിയുകയോ ചെയ്യരുത്. വേസ്റ്റുകൾ അതാത് വേസ്റ്റ് ബക്കറ്റുകളിൽ തന്നെ നിക്ഷേപിക്കുക.</h3>
+        <h3>15. കുളിമുറികളും ശുചിമുറികളും വൃത്തിയായി ഉപയോഗിക്കുകയും നാശനഷ്ടം വരുത്താതെയും സൂക്ഷിക്കുക.</h3>
+        <h3>16. നിയമപരമല്ലാത്ത പ്രവർത്തനങ്ങൾ ക്കോവ്യാജസാക്ഷ്യപത്രത്തിനോവേണ്ടി ആശുപത്രി അധികൃതരുമായിബന്ധപ്പെടരുത്.</h3>
+        <h3>17. നിയമപരമായ പ്രശ്നങ്ങൾ ഒഴിവാക്കുന്നതിന് ആശുപത്രിജീവനക്കാരുടെയും മറ്റുരോഗികളുടെയും മാനുഷികവും തൊഴിൽപരവുമായ അവകാശങ്ങൾക്കും മൂല്യങ്ങൾക്കും വിലകല്പിക്കുകയും അക്രമപ്രവർത്തനങ്ങൾ ഒഴിവാക്കുകയും ചെയ്യേണ്ടതാണ്.</h3>
+  
+            
+                  </marquee>
+          </section>
+        
+    
+
+          <section class="data">
+            <div class="scrolling-text">
+              <marquee behavior="scroll" direction="left">
+                <span class="pro-field">Public Relation Officer at your service : +91 7025212233</span>
+              </marquee>
+            </div>
+          </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+   
+    
+   
+</body>
+
+</html>
